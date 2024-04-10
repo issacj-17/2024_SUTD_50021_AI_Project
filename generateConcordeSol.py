@@ -85,6 +85,8 @@ def solToMask(filePath):
         if i == 0:
             continue
         l += map(lambda x: int(x), line.split())
+    l.append(0) # complete full loop
+    print(l)
     n = len(l)
     np_mask = np.zeros((n,n), dtype=np.int16)
     for i in range(0, n-1):
@@ -107,16 +109,41 @@ def dirLevelSolMasking(pathToDirectory):
                 if fname == "pairwise.sol":
                     out_file_path = (os.path.abspath(os.path.join(directory,file))).decode("ascii") + "/tsp_log.txt"
                     solToMask(os.path.abspath(os.path.join(directory,file,f)).decode("ascii"))
-                    
+
+
+def getTimeFromLog(pathToLogFile):
+    with open(pathToLogFile, "r") as f:
+        contents = f.readlines()
+    last_line = contents[-1]
+    if last_line.startswith("Total Running Time:"):
+        time_in_sec = last_line.split()[-2]
+        output_path = "/".join(pathToLogFile.split("/")[:-1]) + "/time_taken_seconds.txt"
+        with open(output_path, "w+") as f:
+            f.write(time_in_sec)
+
+
+def dirLevelTimeGeneration(pathToDirectory):
+    # pathToDirectory is the dir one level above ds_ files
+    directory = os.fsencode(pathToDirectory)
+    if os.path.isdir(directory):
+        for file in os.listdir(directory):
+            filename = os.fsdecode(file)
+            if filename.startswith("ds_"):
+                for f in os.listdir(os.path.join(directory,file)):
+                    fname = os.fsdecode(f)
+                    if fname == "tsp_log.txt":
+                        getTimeFromLog(os.path.abspath(os.path.join(directory,file,f)).decode("ascii"))
 
 def main():
     directory_in_str = instances_directory
     directory = os.fsencode(directory_in_str)
     for file in os.listdir(directory):
-        for f in os.listdir(os.path.join(directory, file)):
-            directoryOfCsvToTsp(os.path.join(directory, file, f))
-            runConcordeOnTspFiles(os.path.join(directory, file, f))
-            dirLevelSolMasking(os.path.join(directory, file, f))
+        if os.path.isdir(os.path.join(directory, file)):
+            for f in os.listdir(os.path.join(directory, file)):
+                directoryOfCsvToTsp(os.path.join(directory, file, f))
+                runConcordeOnTspFiles(os.path.join(directory, file, f))
+                dirLevelSolMasking(os.path.join(directory, file, f))
+                dirLevelTimeGeneration(os.path.join(directory, file, f))
 
 
 if __name__ == "__main__":
