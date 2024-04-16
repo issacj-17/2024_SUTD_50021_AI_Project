@@ -1,0 +1,20 @@
+/Users/zhengwei/Documents/codeL/concordeTSPFileGeneration/concorde /Users/zhengwei/Documents/codeL/concordeTSPFileGeneration/instances/1/22/ds_607_courier_949/pairwise.tsp
+Host: lolMachine.local  Current process id: 90524
+Using random seed 1712735512
+Problem Name: ds_607_courier_949
+Problem Type: TSP
+nil
+Number of Nodes: 23
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 10750 (from tour)
+  LP Value  1: 8390.000000  (0.00 seconds)
+  LP Value  2: 10728.200000  (0.00 seconds)
+  LP Value  3: 10750.000000  (0.00 seconds)
+New lower bound: 10750.000000
+Final lower bound 10750.000000, upper bound 10750.000000
+Exact lower bound: 10750.000000
+DIFF: 0.000000
+Final LP has 41 rows, 108 columns, 579 nonzeros
+Optimal Solution: 10750.00
+Number of bbnodes: 1
+Total Running Time: 0.02 (seconds)

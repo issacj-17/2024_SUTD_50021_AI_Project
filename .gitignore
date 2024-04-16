@@ -1,5 +1,6 @@
 .DS_Store
 data/LaDe-D/
 data/processed*/
+!data/processed_heuristic-threshold
 .ipynb_checkpoints/
 /env

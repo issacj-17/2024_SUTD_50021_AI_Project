@@ -1,0 +1,9 @@
+/Users/zhengwei/Documents/codeL/concordeTSPFileGeneration/concorde /Users/zhengwei/Documents/codeL/concordeTSPFileGeneration/instances/1/1/ds_814_courier_1558/pairwise.tsp
+Host: lolMachine.local  Current process id: 89493
+Using random seed 1712735504
+Problem Name: ds_814_courier_1558
+Problem Type: TSP
+nil
+Number of Nodes: 2
+Explicit Lengths (CC_MATRIXNORM)
+Only 2 nodes -- must have at least 3 nodes in a TSP

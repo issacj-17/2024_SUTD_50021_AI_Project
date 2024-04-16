@@ -1,0 +1,10 @@
+/Users/zhengwei/Documents/codeL/concordeTSPFileGeneration/concorde /Users/zhengwei/Documents/codeL/concordeTSPFileGeneration/instances/3/4/ds_624_courier_2688/pairwise.tsp
+Host: lolMachine.local  Current process id: 90756
+Using random seed 1712735515
+Problem Name: ds_624_courier_2688
+Problem Type: TSP
+nil
+Number of Nodes: 7
+Explicit Lengths (CC_MATRIXNORM)
+Optimal Solution: 9683.00
+Total Running Time: 0.00 (seconds)

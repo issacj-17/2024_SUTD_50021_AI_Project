@@ -1,0 +1,37 @@
+/Users/zhengwei/Documents/codeL/concordeTSPFileGeneration/concorde /Users/zhengwei/Documents/codeL/concordeTSPFileGeneration/instances/1/27/ds_604_courier_1103/pairwise.tsp
+Host: lolMachine.local  Current process id: 89035
+Using random seed 1712735500
+Problem Name: ds_604_courier_1103
+Problem Type: TSP
+nil
+Number of Nodes: 28
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 13261 (from tour)
+  LP Value  1: 10215.000000  (0.00 seconds)
+  LP Value  2: 13213.000000  (0.00 seconds)
+  LP Value  3: 13255.500000  (0.00 seconds)
+recomputing rownorms ...
+  LP Value  4: 13255.500000  (0.00 seconds)
+New lower bound: 13255.500000
+Final lower bound 13255.500000, upper bound 13261.000000
+Exact lower bound: 13255.500000
+DIFF: 0.000000
+Time for Total: 0.01 seconds (0.01 total in 1 calls)
+Final LP has 37 rows, 46 columns, 348 nonzeros
+LOWER BOUND: 13255.500000   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+infeas_recover ...
+phase 1 addbad_variables
+Could not recover a feasible LP
+Branched-LP is infeasible
+phase 1 pricing
+Problem is shown to be infeasible
+BBnode 0 split into 1 (13273.00X) 2 (1000000000000000019884624838656.00X) (0.00 seconds)
+Child 0 is pruned
+Child 1 is infeasible
+
+Task 1: Exit
+Optimal Solution: 13261.00
+Number of bbnodes: 3
+Total Running Time: 0.03 (seconds)  Branching Time: 0.00 (seconds)
